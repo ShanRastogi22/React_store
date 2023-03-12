@@ -1,9 +1,10 @@
 import React from 'react'
-
+import Nav from '../../component/Nav'
 const View_books = () => {
   return (
     <div>
-      view_books
+      <Nav />
+     <h1> view_books</h1>
     </div>
   )
 }

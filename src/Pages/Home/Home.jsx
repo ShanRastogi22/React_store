@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <Nav />
-      <Grid container sx={{justifyContent: 'space-between'}}>
+      <Grid container sx={{justifyContent: 'space-around;'}}>
         {
           datas &&
           datas.map((data, index) => {

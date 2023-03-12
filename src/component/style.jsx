@@ -6,7 +6,7 @@ display: flex;
 justify-content: space-between;
 `
 export const StyledCard = styled.div`
- width:60vh;
+ width:120%;
  height:100px;
  color:white;
  background-color: blue;
