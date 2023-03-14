@@ -8,14 +8,14 @@ export const datas = [
     title: "Add a Book",
     description: 'Add your book page and information',
     icon: <AddIcon />,
-    route: "/add-books"
+    route: "/add_book"
   },
   {
     id: 2,
     title: "View a Book",
     description: "View your book page and description",
     icon: <PreviewIcon />,
-    route: "/view-book"
+    route: "/view_book"
   },
   {
     id: 3,

@@ -2,10 +2,11 @@ import React from 'react';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { StyledCard, FlexBox } from "./style"
-import { DisplaySettings } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom'
  
 
 export default function MediaCard(props) {
+  const navigate = useNavigate(); 
   return (
     <StyledCard>
       <CardContent>
@@ -13,7 +14,7 @@ export default function MediaCard(props) {
         <Typography gutterBottom variant="h5" component="div">
          { props.data.title }
         </Typography>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" component="div" onClick={() => navigate(props.data.route)}>
          { props.data.icon }
         </Typography>
         </FlexBox>
