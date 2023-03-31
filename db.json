@@ -2,32 +2,31 @@
   "save-book-data": [
     {
       "id": 1,
-      "formData": {
-        "Author_Name": "Vaishnavi singh",
-        "Book_Discription": "This is a story book",
-        "Book_id": "1",
-        "Cover_image": "ddddd"
-      }
+      "Book_Name": "xya",
+      "Author_Name": "Vaishnavi singh",
+      "Book_Discription": "This is a story book",
+      "Book_id": "1",
+      "Cover_image": "ddddd"
     },
     {
       "Author_Name": "Kusum  gupta",
+      "Book_Name": "ffss",
       "Book_Discription": "This is a love story book",
       "Book_id": "2",
       "Cover_image": "ggggg",
       "id": 3
     },
     {
-      "formData": {
-        "Author_Name": "Shan Rastogi",
-        "Book_Discription": "This is a Rough book",
-        "Book_id": "3",
-        "Cover_image": "hgiduhudu",
-        "id": 4
-      }
+      "Author_Name": "Shan Rastogi",
+      "Book_Name": "ffxxx",
+      "Book_Discription": "This is a Rough book",
+      "Book_id": "3",
+      "Cover_image": "hgiduhudu",
+      "id": 4
     },
     {
       "Book_id": "ff",
-      "Book_Name": "ff",
+      "Book_Name": "fkk",
       "Book_Discription": "ff",
       "Author_Name": "ff",
       "Cover_image": "ff",
@@ -39,7 +38,7 @@
       "Book_Discription": "this the best book for sales persons",
       "Author_Name": "Robert B.Cialdini",
       "Cover_image": "................................",
-      "id": 4
+      "id": 7
     },
     {
       "Book_id": "666",
@@ -54,14 +53,16 @@
       "Book_Name": "jangle book",
       "Book_Discription": "kids story book",
       "Author_Name": "i dont know",
-      "Cover_image": "nhi hai ",
+      "Cover_image": "https://img.freepik.com/free-vector/wild-animals-forest_1308-31207.jpg?size=626&ext=jpg ",
       "id": 6
     },
     {
-      "id": 7
-    },
-    {
-      "id": 8
+      "Book_id": "866405",
+      "Book_Name": "cartoon book",
+      "Book_Discription": "This book is only for kids",
+      "Author_Name": "anamika",
+      "Cover_image":"https://img.freepik.com/free-vector/many-cute-animals-bamboo-forest_1308-32851.jpg?w=1060&t=st=1680233074~exp=1680233674~hmac=919e349b52cf998f73cf403542d97543befcc3e054f00a5df5c89602dec77978",
+       "id": 8
     }
   ]
 }
