@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 export default function ImgMediaCard({data}) {
   const navigate = useNavigate();
   const handleRoute = (item) => {
-    navigate('/edit_book')
+    navigate(`/edit_book/${data.id}`, {state: { item: item }});
   }
   return (
     <Card sx={{ maxWidth: 345, minWidht: 345}}>
