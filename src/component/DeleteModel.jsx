@@ -16,7 +16,7 @@ const style = {
   p: 4,
 };
 
-export default function KeepMountedModal({open, onClose}) {
+export default function KeepMountedModal({open, onClose, handleDelete, data}) {
 
 
   return (
@@ -34,8 +34,10 @@ export default function KeepMountedModal({open, onClose}) {
           <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
             Are you confirm to delete this ? 
           </Typography>
-          <Button>Yes, i want to delete.</Button>
-          <Button>Cancel</Button>
+          <div>
+          <Button onClick={()=>handleDelete(data)}>Confirm</Button>
+          <Button onClick={onClose}>Cancel</Button>
+          </div>
         </Box>
       </Modal>
     </div>

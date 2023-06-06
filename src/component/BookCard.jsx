@@ -4,26 +4,40 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+// import { useSnackbar } from 'notistack';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 import DeleteModel from './DeleteModel';
 import { Dialog } from '@mui/material';
+import axios from 'axios';
+import { useSnackbar } from 'notistack';
 
 export default function ImgMediaCard({data}) {
   const navigate = useNavigate();
+  // const { enqueueSnackbar } = useSnackbar();
 const [openModal, setOpenModal] = useState(false);
-
+navigate('/view_book');
 
   const handleRoute = (item) => {
     navigate(`/edit_book/${data.id}`, {state: { item: item }});
   }
-
+// To close the modal 
   const handleCloseModal = () => {
     setOpenModal(false)
   }
-
-  const handleClick = () =>{
+// To open the modal 
+  const handleClick = () =>{ 
     setOpenModal(true);
+  }
+  // to delete the book cart
+
+  const handleDelete = async(item) => {
+    setOpenModal(false);
+    await axios.delete(`http://localhost:8000/save-book-data/${item.id}`).then((res) => {
+      if(res) {
+        navigate('/view_book');
+      }
+    })
   }
   return (
     <>
@@ -53,6 +67,8 @@ const [openModal, setOpenModal] = useState(false);
     <DeleteModel 
     open={openModal} 
     onClose={handleCloseModal}
+    handleDelete={handleDelete}
+    data={data}
     /> 
     </Dialog>
     </>
