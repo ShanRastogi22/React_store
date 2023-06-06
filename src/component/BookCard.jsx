@@ -4,7 +4,6 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-// import { useSnackbar } from 'notistack';
 import Typography from '@mui/material/Typography';
 import { useNavigate } from 'react-router-dom';
 import DeleteModel from './DeleteModel';
@@ -14,7 +13,7 @@ import { useSnackbar } from 'notistack';
 
 export default function ImgMediaCard({data}) {
   const navigate = useNavigate();
-  // const { enqueueSnackbar } = useSnackbar();
+  const { enqueueSnackbar } = useSnackbar();
 const [openModal, setOpenModal] = useState(false);
 navigate('/view_book');
 
@@ -35,8 +34,11 @@ navigate('/view_book');
     setOpenModal(false);
     await axios.delete(`http://localhost:8000/save-book-data/${item.id}`).then((res) => {
       if(res) {
-        navigate('/view_book');
+        enqueueSnackbar("Your cart has been deleted", { variant: 'success'})
+        navigate('/'); 
       }
+    }).catch(() => {
+      enqueueSnackbar('something went worng', { variant: 'error'});
     })
   }
   return (
